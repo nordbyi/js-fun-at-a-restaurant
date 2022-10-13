@@ -1,16 +1,9 @@
 function takeOrder(order, orderArr) {
-  return orderArr.length >= 3 ? orderArr.splice(3) : orderArr.push(order)
+  orderArr.length >= 3 ? orderArr.splice(3) : orderArr.push(order)
 }
-//Don't you try to give me an array that's already more than 3 orders! Don't do it! I'll splice() ya!
 
 const refundOrder = function(orderToRemove, orderArr) {
-  // return orderArr.filter(order => order.orderNumber !== orderToRemove)
-  // mean test wants the original array back... :(
-  var indexPosition = null;
-  for(var i = 0; i < orderArr.length; i++){
-    if(orderArr[i].orderNumber === orderToRemove) indexPosition = i
-  }
-  return orderArr.splice(indexPosition, 1)
+  orderArr.splice(orderArr.findIndex(el => el.orderNumber === orderToRemove), 1)
 }
 
 const listItems = (arr) => {
