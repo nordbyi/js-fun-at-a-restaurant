@@ -7,7 +7,7 @@ function createMenuItem(name, price, type) {
 }
 
 const addIngredients = function(ingredient, arr) {
-  return arr.includes(ingredient) ?  arr :  arr.push(ingredient)
+  arr.includes(ingredient) ?  arr :  arr.push(ingredient)
 }
 
 const formatPrice = function(price) {
