@@ -7,15 +7,7 @@ const refundOrder = function(orderToRemove, orderArr) {
 }
 
 const listItems = (arr) => {
-  var str = ''
-  arr.forEach((obj, index) => {
-    if(index === arr.length - 1) {
-      str += `${obj.item}`
-    } else {
-      str += `${obj.item}, `
-    }
-  })
-  return str
+  return items = arr.map(el => el.item).join(', ')
 }
 
 const searchOrder = (orderArr, orderItem) => {
