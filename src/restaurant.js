@@ -6,9 +6,8 @@ function createRestaurant(name, menuObj = {breakfast: [], lunch : [], dinner : [
 }
 
 const addMenuItem = function(restaurant, item) {
-  restaurant.menus[item.type].includes(item)
-  ? restaurant
-  : restaurant.menus[item.type].push(item)
+  var mealTime = restaurant.menus[item.type]
+  if(!mealTime.includes(item)) mealTime.push(item)
 }
 
 const removeMenuItem = (restaurantObj, itemName, itemType) => {
